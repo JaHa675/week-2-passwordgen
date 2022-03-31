@@ -1,3 +1,9 @@
+let lowercaseList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",];
+let uppercaseList = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",];
+let numericList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+let specialCharacterList = ["!","@","#","$","%","^","&","*","(",")",];
+let possibleCharacters = [];
+let passwordArray = [];
 function generatePassword() {
   let textLength = prompt("How many characters?", "10");
   // checking for correct text length
@@ -13,77 +19,6 @@ function generatePassword() {
       numeric: confirm("Confirm numbers?"),
       specialCharacters: confirm("Confirm special characters?"),
     };
-    let lowercaseList = [
-      "a",
-      "b",
-      "c",
-      "d",
-      "e",
-      "f",
-      "g",
-      "h",
-      "i",
-      "j",
-      "k",
-      "l",
-      "m",
-      "n",
-      "o",
-      "p",
-      "q",
-      "r",
-      "s",
-      "t",
-      "u",
-      "v",
-      "w",
-      "x",
-      "y",
-      "z",
-    ];
-    let uppercaseList = [
-      "A",
-      "B",
-      "C",
-      "D",
-      "E",
-      "F",
-      "G",
-      "H",
-      "I",
-      "J",
-      "K",
-      "L",
-      "M",
-      "N",
-      "O",
-      "P",
-      "Q",
-      "R",
-      "S",
-      "T",
-      "U",
-      "V",
-      "W",
-      "X",
-      "Y",
-      "Z",
-    ];
-    let numericList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-    let specialCharacterList = [
-      "!",
-      "@",
-      "#",
-      "$",
-      "%",
-      "^",
-      "&",
-      "*",
-      "(",
-      ")",
-    ];
-    let possibleCharacters = [];
-    let passwordArray = [];
 
     if (passwordParam.uppercase) {
       possibleCharacters.push(...uppercaseList);
@@ -97,6 +32,7 @@ function generatePassword() {
     if (passwordParam.specialCharacters) {
       possibleCharacters.push(...specialCharacterList);
     }
+
     function randomCharacter() {
       return possibleCharacters[
         Math.floor(Math.random() * possibleCharacters.length)
@@ -110,6 +46,8 @@ function generatePassword() {
     return passwordArray.join("");
   }
 }
+
+
 // Assignment Code, DO NOT EDIT ANYTHING  BELOW THIS LINE
 var generateBtn = document.querySelector("#generate");
 
